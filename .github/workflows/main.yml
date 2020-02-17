@@ -14,3 +14,6 @@ jobs:
         java-version: 11
     - name: Build with Maven
       run: mvn clean compile install package
+    - name: GitHub Upload Release Artifacts
+      uses: Roang-zero1/github-upload-release-artifacts-action@v2.1.0
+      if: github.ref == 'refs/heads/master'
