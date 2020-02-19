@@ -2,12 +2,13 @@
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <filter class="ch.qos.logback.core.filter.EvaluatorFilter">
             <evaluator class="ch.qos.logback.classic.boolex.OnMarkerEvaluator">
-                <marker>MAIN</marker>
+                <marker>IP</marker>
+                <marker>ERROR</marker>
             </evaluator>
             <onMismatch>DENY</onMismatch>
             <onMatch>NEUTRAL</onMatch>
         </filter>
-        <file>${logs_dir:-.}/External-IP-Checker.log</file>
+        <file>${log_dir:-.}/External-IP-Checker.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
             <fileNamePattern>External-IP-Checker_%i.log</fileNamePattern>
         </rollingPolicy>
@@ -16,17 +17,15 @@
             <maxFileSize>5MB</maxFileSize>
         </triggeringPolicy>
         <encoder>
-            <pattern>[%date{yyyy.MM.dd}] [%date{HH:mm}] [%level] %msg%n</pattern>
+            <pattern>[%marker] [%date{yyyy.MM.dd}] [%date{HH:mm}] %msg%n</pattern>
         </encoder>
     </appender>
-
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>[%date] %highlight([%level]) [%logger{10} %file:%line] %msg%n</pattern>
+            <pattern>[%marker] [%date] %highlight([%level]) [%logger{10} %file:%line] %msg%n</pattern>
 
         </encoder>
     </appender>
-
 
     <logger name="FILE" level="INFO" />
     <logger name="STDOUT" level="INFO">
