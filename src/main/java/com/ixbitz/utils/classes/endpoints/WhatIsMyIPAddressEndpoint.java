@@ -21,7 +21,7 @@ public class WhatIsMyIPAddressEndpoint implements IEndpoint {
 
     public WhatIsMyIPAddressEndpoint() {
         name = "WhatIsMyIPAdddress";
-        url = "http://www.mocky.io/v2/5e4bf6083100005500d8bb24";
+        url = "https://bot.whatismyipaddress.com/";
     }
 
     @Override
