@@ -11,7 +11,16 @@ import com.ixbitz.utils.classes.ResponsePair;
 import com.ixbitz.utils.exceptions.UnexpectedResponseException;
 
 public interface IEndpoint {
+    /**
+     * Gets the name of an endpoint
+     * @return name of the endpoint
+     */
     String getName();
+
+    /**
+     * Gets the url of an endpoint
+     * @return url of the endpoint
+     */
     String getUrl();
 
     /**
