@@ -38,7 +38,7 @@ public class App {
                 LOGGER.info(IP, "{}: {}", name, ipAddress);
                 break;
             } catch (NoSuchMethodException | IllegalAccessException | InstantiationException | HttpException | InvocationTargetException e) {
-               LOGGER.error(ERROR, "Error while retrieving IP from {}", name);
+                LOGGER.error(ERROR, "Error while retrieving IP from {}", name);
             }
         }
     }
