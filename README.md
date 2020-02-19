@@ -1,6 +1,6 @@
 ![CI](https://github.com/Ixbitz/External-IP-Checker/workflows/CI/badge.svg?branch=master)
 
-# External-IP-Checker v1.0
+# External-IP-Checker v1.0.1
 Small utility to check your public IPv4 address
 
 ### Prerequisites
@@ -15,11 +15,11 @@ If neither has been set, the log files will be put next to the jar file.
 ### How to run
 With Logging directory as parameter:
 
-`java -DLOGDIR="<logfile location>" -jar External-IP-Checker-v1.0.jar`
+`java -DLOGDIR="<logfile location>" -jar External-IP-Checker-v1.0.1.jar`
 
 or without:
 
-`java -jar External-IP-Checker-v1.0.jar`
+`java -jar External-IP-Checker-v1.0.1.jar`
 
 
 ### Creating additional endpoints
