@@ -9,14 +9,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Marker;
 import org.slf4j.MarkerFactory;
-import org.slf4j.event.Level;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Set;
 
 public class App {
-    private static final Marker MAIN = MarkerFactory.getMarker("MAIN");
+    private static final Marker IP = MarkerFactory.getMarker("IP");
+    private static final Marker ERROR = MarkerFactory.getMarker("ERROR");
     private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
 
     public static void main(String[] args) {
@@ -35,10 +35,10 @@ public class App {
                 String url = (String) getUrlMethod.invoke(aClass.getDeclaredConstructor().newInstance());
                 String ipAddress = (String) handleResponseMethod.invoke(aClass.getDeclaredConstructor().newInstance(),Utils.doHttpRequest(url));
 
-                LOGGER.info(MAIN, "{}: {}", name, ipAddress);
+                LOGGER.info(IP, "{}: {}", name, ipAddress);
                 break;
             } catch (NoSuchMethodException | IllegalAccessException | InstantiationException | HttpException | InvocationTargetException e) {
-               LOGGER.error(MAIN, "Error while retrieving IP from {}", name);
+               LOGGER.error(ERROR, "Error while retrieving IP from {}", name);
             }
         }
     }

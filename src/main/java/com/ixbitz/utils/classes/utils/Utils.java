@@ -24,7 +24,6 @@ import java.net.URL;
  * @since 1.0-SNAPSHOT
  */
 public class Utils {
-    private static final Logger LOGGER = LoggerFactory.getLogger(Utils.class);
     private Utils() {
 
     }
