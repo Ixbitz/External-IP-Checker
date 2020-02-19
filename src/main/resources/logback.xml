@@ -7,7 +7,7 @@
             <onMismatch>DENY</onMismatch>
             <onMatch>NEUTRAL</onMatch>
         </filter>
-        <file>${logs_dir:-.}/External-IP-Checker.log</file>
+        <file>${LOGDIR:-.}/External-IP-Checker.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
             <fileNamePattern>External-IP-Checker_%i.log</fileNamePattern>
         </rollingPolicy>
