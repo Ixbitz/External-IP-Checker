@@ -1,8 +1,7 @@
 /*
  * Project: External-IP-Checker
  *
- * COPYRIGHT: Copyright 2019 AMPLEXOR Netherlands.
- * All Rights Reserved.
+ * Author: Job Putters
  *
  */
 package com.ixbitz.utils.classes.endpoints;

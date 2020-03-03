@@ -1,3 +1,9 @@
+/*
+ * Project: External-IP-Checker
+ *
+ * Author: Job Putters
+ *
+ */
 package com.ixbitz.utils;
 
 import com.ixbitz.utils.classes.ResponsePair;
